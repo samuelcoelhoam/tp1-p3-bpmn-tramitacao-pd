@@ -39,7 +39,7 @@ esta tabela depois de commitar, rode `git log --oneline` e copie o hash curto.
 
 | Versão | Commit    | Data       | Descrição |
 |--------|-----------|------------|-----------|
-| v0.1   | `pendente` | 2026-09-19 | Estrutura inicial do repositório (README, .gitignore, pasta `diagrama/`) — ainda sem o arquivo `.bpmn`. |
+| v0.1   | `ef23eaf` | 2026-09-19 | Estrutura inicial do repositório (README, .gitignore, pasta `diagrama/`) — ainda sem o arquivo `.bpmn`. |
 | v0.2   | `pendente` | —          | Primeiro esqueleto do diagrama: pools e lanes (Empresa, Professor/Coordenador, Secretaria do IComp, PROTEC, CITEC, PROADM/DCC, Procuradoria Federal, Fundação de Apoio), sem gateways. |
 | v0.3   | `pendente` | —          | Adição dos gateways, prazos (Art. 18–20) e da exceção de dispensa da Procuradoria com minuta padrão AGU (Art. 8º), conforme a Resolução 047/2024. |
 | v1.0   | `pendente` | —          | Revisão pós-validação com a Socorro (escopo único para pesquisa/capacitação/especialização; remoção de etapa interna do IComp não confirmada) — **versão final de entrega**. |

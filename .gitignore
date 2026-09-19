@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+
+# arquivos temporários/backup que alguns modeladores BPMN criam
+*.bpmn~
+*.bpmn.bak
+.camunda-modeler/

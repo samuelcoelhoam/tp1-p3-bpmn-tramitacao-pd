@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0z89by8" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.51.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
   <bpmn:collaboration id="Collaboration_1cjawz2">
-    <bpmn:documentation>Conforme?</bpmn:documentation>
     <bpmn:participant id="Participant_1jukn4e" name="Empresa Parceira" processRef="Process_1bakolh" />
-    <bpmn:participant id="Participant_1f4z03i" name="UFAM — Instrução do APPD" processRef="Process_0pkai9w" />
+    <bpmn:participant id="Participant_1f4z03i" name="UFAM — Instrução do APPDI" processRef="Process_0pkai9w" />
     <bpmn:participant id="Participant_0yym9zr" name="UFAM / Concedente / Fundação de Apoio" processRef="Process_14xzcje" />
     <bpmn:messageFlow id="Flow_078f4vx" sourceRef="Activity_1oxbzn4" targetRef="Activity_18srv90" />
     <bpmn:messageFlow id="Flow_0c48zs3" sourceRef="Activity_0ow2e3t" targetRef="Activity_0oyoi1m" />
@@ -69,7 +68,7 @@
       <bpmn:incoming>Flow_1sz61wb</bpmn:incoming>
       <bpmn:outgoing>Flow_1cu3k9r</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:exclusiveGateway id="Gateway_1y09f14" name="Minuta é&#10;padrão AGU">
+    <bpmn:exclusiveGateway id="Gateway_1y09f14" name="Minuta é&#10;padrão AGU?">
       <bpmn:incoming>Flow_1cu3k9r</bpmn:incoming>
       <bpmn:outgoing>Flow_020rmlp</bpmn:outgoing>
       <bpmn:outgoing>Flow_059mpe3</bpmn:outgoing>
@@ -101,7 +100,7 @@
       <bpmn:incoming>Flow_1wefk4i</bpmn:incoming>
       <bpmn:outgoing>Flow_01ughfy</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Activity_0axt2e4" name="Reúne documentação&#10;obrigatória&#10;(Anexo I da Resolução">
+    <bpmn:task id="Activity_0axt2e4" name="Reúne documentação&#10;obrigatória&#10;(Anexo I da Resolução)">
       <bpmn:incoming>Flow_1axck0w</bpmn:incoming>
       <bpmn:outgoing>Flow_1wefk4i</bpmn:outgoing>
     </bpmn:task>
@@ -116,7 +115,7 @@
     <bpmn:sequenceFlow id="Flow_1sz61wb" name="Sim" sourceRef="Gateway_0wzm1io" targetRef="Activity_1451tq7" />
     <bpmn:sequenceFlow id="Flow_1cu3k9r" sourceRef="Activity_1451tq7" targetRef="Gateway_1y09f14" />
     <bpmn:sequenceFlow id="Flow_020rmlp" name="Não" sourceRef="Gateway_1y09f14" targetRef="Activity_1ajsxgb" />
-    <bpmn:sequenceFlow id="Flow_059mpe3" name="Sim — dispensa PF/FUA (Art. 8º §1º-2º" sourceRef="Gateway_1y09f14" targetRef="Activity_0ow2e3t" />
+    <bpmn:sequenceFlow id="Flow_059mpe3" name="Sim — dispensa PF/FUA (Art. 8º §1º-2º)" sourceRef="Gateway_1y09f14" targetRef="Activity_0ow2e3t" />
     <bpmn:sequenceFlow id="Flow_1gztyz3" sourceRef="Activity_1ajsxgb" targetRef="Gateway_0qbemr0" />
     <bpmn:sequenceFlow id="Flow_02utkvf" name="Sim" sourceRef="Gateway_0qbemr0" targetRef="Activity_0ow2e3t" />
     <bpmn:sequenceFlow id="Flow_1iloykn" name="Não" sourceRef="Gateway_0qbemr0" targetRef="Activity_1s0nzno" />
@@ -128,12 +127,17 @@
   </bpmn:process>
   <bpmn:process id="Process_14xzcje" isExecutable="false">
     <bpmn:task id="Activity_0oyoi1m" name="Termo de Convênio:&#10;assinatura e&#10;publicação (DOU)">
-      <bpmn:outgoing>Flow_0nnlz8w</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1mzwglj</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:endEvent id="Event_1wsalp3" name="Convênio celebrado&#10;e publicad">
-      <bpmn:incoming>Flow_0nnlz8w</bpmn:incoming>
+    <bpmn:endEvent id="Event_08f2kpm" name="Convênio encerrado">
+      <bpmn:incoming>Flow_1l7xf3g</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_0nnlz8w" sourceRef="Activity_0oyoi1m" targetRef="Event_1wsalp3" />
+    <bpmn:sequenceFlow id="Flow_1mzwglj" sourceRef="Activity_0oyoi1m" targetRef="Activity_1gqbw8m" />
+    <bpmn:sequenceFlow id="Flow_1l7xf3g" sourceRef="Activity_1gqbw8m" targetRef="Event_08f2kpm" />
+    <bpmn:subProcess id="Activity_1gqbw8m" name="Execução,&#10;prestação de contas&#10;e encerramento">
+      <bpmn:incoming>Flow_1mzwglj</bpmn:incoming>
+      <bpmn:outgoing>Flow_1l7xf3g</bpmn:outgoing>
+    </bpmn:subProcess>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1cjawz2">
@@ -336,22 +340,30 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BPMNShape_0mjk0s2" bpmnElement="Participant_0yym9zr" isHorizontal="true" isExpanded="true">
-        <dc:Bounds x="160" y="1120" width="2398" height="250" />
+        <dc:Bounds x="160" y="1120" width="2570" height="270" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0oyoi1m_di" bpmnElement="Activity_0oyoi1m">
         <dc:Bounds x="2270" y="1220" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1wsalp3_di" bpmnElement="Event_1wsalp3">
-        <dc:Bounds x="2452" y="1242" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_08f2kpm_di" bpmnElement="Event_08f2kpm">
+        <dc:Bounds x="2652" y="1242" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2445" y="1285" width="51" height="40" />
+          <dc:Bounds x="2646" y="1285" width="50" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0nnlz8w_di" bpmnElement="Flow_0nnlz8w">
+      <bpmndi:BPMNShape id="Activity_1gqbw8m_di" bpmnElement="Activity_1gqbw8m">
+        <dc:Bounds x="2460" y="1220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1mzwglj_di" bpmnElement="Flow_1mzwglj">
         <di:waypoint x="2370" y="1260" />
-        <di:waypoint x="2452" y="1260" />
+        <di:waypoint x="2460" y="1260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l7xf3g_di" bpmnElement="Flow_1l7xf3g">
+        <di:waypoint x="2560" y="1260" />
+        <di:waypoint x="2652" y="1260" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_1jukn4e_di" bpmnElement="Participant_1jukn4e" isHorizontal="true" isExpanded="true">
         <dc:Bounds x="160" y="80" width="1190" height="250" />
@@ -384,5 +396,8 @@
         <di:waypoint x="540" y="430" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_165c1tn">
+    <bpmndi:BPMNPlane id="BPMNPlane_0omnmof" bpmnElement="Activity_1gqbw8m" />
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

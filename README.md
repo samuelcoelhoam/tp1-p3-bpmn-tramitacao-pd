@@ -40,7 +40,7 @@ esta tabela depois de commitar, rode `git log --oneline` e copie o hash curto.
 | Versão | Commit    | Data       | Descrição |
 |--------|-----------|------------|-----------|
 | v0.1   | `ef23eaf` | 2026-09-19 | Estrutura inicial do repositório (README, .gitignore, pasta `diagrama/`) — ainda sem o arquivo `.bpmn`. |
-| v0.2   | `pendente` | —          | Primeiro esqueleto do diagrama: pools e lanes (Empresa, Professor/Coordenador, Secretaria do IComp, PROTEC, CITEC, PROADM/DCC, Procuradoria Federal, Fundação de Apoio), sem gateways. |
+| v0.2   | `e01caaa` | 2026-09-19 | Primeiro esqueleto do diagrama: pools e lanes (Empresa, Professor/Coordenador, Secretaria do IComp, PROTEC, CITEC, PROADM/DCC, Procuradoria Federal, Fundação de Apoio), sem gateways. |
 | v0.3   | `pendente` | —          | Adição dos gateways, prazos (Art. 18–20) e da exceção de dispensa da Procuradoria com minuta padrão AGU (Art. 8º), conforme a Resolução 047/2024. |
 | v1.0   | `pendente` | —          | Revisão pós-validação com a Socorro (escopo único para pesquisa/capacitação/especialização; remoção de etapa interna do IComp não confirmada) — **versão final de entrega**. |
 
@@ -48,6 +48,19 @@ esta tabela depois de commitar, rode `git log --oneline` e copie o hash curto.
 > (`git log --oneline -1`) e a data real. Se o diagrama passar por mais uma
 > rodada de ajuste depois da v1.0, adicione uma nova linha em vez de reescrever
 > uma existente — é isso que comprova o refinamento para o relatório (E3).
+
+### Capturas por versão
+
+Uma imagem por marco, pra visualizar a evolução sem precisar abrir o `.bpmn`.
+Pra adicionar a próxima: tire um print do Camunda Modeler, salve em
+`historico/vX.Y-descricao-curta.png` e adicione um bloco igual aos abaixo.
+
+<details>
+<summary><strong>v0.2</strong> — Esqueleto de pools e lanes</summary>
+
+![v0.2 - esqueleto de pools e lanes](historico/v0.2-esqueleto-pools-lanes.png)
+
+</details>
 
 ## Citando isto no relatório (E3)
 

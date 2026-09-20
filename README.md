@@ -42,7 +42,7 @@ esta tabela depois de commitar, rode `git log --oneline` e copie o hash curto.
 | v0.1   | `ef23eaf` | 2026-09-19 | Estrutura inicial do repositório (README, .gitignore, pasta `diagrama/`) — ainda sem o arquivo `.bpmn`. |
 | v0.2   | `e01caaa` | 2026-09-19 | Primeiro esqueleto do diagrama: pools e lanes (Empresa, Professor/Coordenador, Secretaria do IComp, PROTEC, CITEC, PROADM/DCC, Procuradoria Federal, Fundação de Apoio), sem gateways. |
 | v0.3   | `1e4fb02` | 2026-09-20 | Fluxo completo desenhado (tarefas, eventos, os 4 gateways exclusivos com todos os rótulos Sim/Não) **+ correção estrutural**: os pools "Proponente" e "Formalização do APPDI" foram fundidos em um único pool ("UFAM — Instrução do APPDI"). Motivo: setas que saem de um gateway são sempre *sequence flow*, e sequence flow não pode cruzar pool — como as três reprovações (PROTEC, CITEC, Procuradoria) precisam devolver o processo pra "Corrige e reenvia processo", esse elemento precisa estar na mesma organização/pool que os gateways. Depois da fusão, sobraram só 2 *message flows* reais no diagrama inteiro: Empresa→Professor (início) e Celebração de Convênio→Termo de Convênio (fim, pool da Fundação de Apoio) — as únicas travessias pra organizações genuinamente externas à UFAM. |
-| v1.0   | `pendente` | —          | Revisão pós-validação com a Socorro (escopo único para pesquisa/capacitação/especialização; remoção de etapa interna do IComp não confirmada) — **versão final de entrega**. |
+| v1.0   | `d94110a` | 2026-09-20 | **Versão final de entrega.** Acrescenta o subprocesso colapsado "Execução, prestação de contas e encerramento" entre a assinatura do convênio e o evento de fim (renomeado para "Convênio encerrado") — nível de detalhe alinhado ao que a Socorro pediu ("por alto") e ao que a própria Resolução 047/2024 permite (Art. 21-22 remetem a um ato normativo próprio da PROADM ainda não detalhado). Também corrige 5 pendências de texto (parênteses e interrogação faltando, e um campo de documentação solto no elemento errado). |
 
 > Ao fechar cada etapa, atualize a linha correspondente com o hash do commit
 > (`git log --oneline -1`) e a data real. Se o diagrama passar por mais uma
@@ -68,6 +68,13 @@ Pra adicionar a próxima: tire um print do Camunda Modeler, salve em
 <summary><strong>v0.3</strong> — Fluxo completo, pool único corrigido</summary>
 
 ![v0.3 - fluxo completo com pool unico](historico/v0.3-fluxo-completo-pool-unico.png)
+
+</details>
+
+<details open>
+<summary><strong>v1.0</strong> — Versão final, com subprocesso de execução/encerramento</summary>
+
+![v1.0 - versao final](historico/v1.0-final.png)
 
 </details>
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0z89by8" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.51.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+  <bpmn:collaboration id="Collaboration_1cjawz2">
+    <bpmn:participant id="Participant_1jukn4e" name="Empresa Parceira" processRef="Process_1bakolh" />
+    <bpmn:participant id="Participant_10f1rfs" name="Proponente (IComp)" processRef="Process_099oqz3" />
+    <bpmn:participant id="Participant_1f4z03i" name="Formalização do APPDI (UFAM)" processRef="Process_0pkai9w" />
+    <bpmn:participant id="Participant_0yym9zr" name="UFAM / Concedente / Fundação de Apoio" processRef="Process_14xzcje" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1bakolh" isExecutable="false" />
+  <bpmn:process id="Process_099oqz3" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_12e435l">
+      <bpmn:lane id="Lane_1ngwds8" name="Professor/Coordenador" />
+      <bpmn:lane id="Lane_01rn7ii" name="Secretaria do IComp" />
+    </bpmn:laneSet>
+  </bpmn:process>
+  <bpmn:process id="Process_0pkai9w" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_0uz4sm0">
+      <bpmn:lane id="Lane_1hh0kv3" name="PROTEC" />
+      <bpmn:lane id="Lane_1xipdxh" name="CITEC" />
+      <bpmn:lane id="Lane_062ihke" name="PROADM/DCC" />
+      <bpmn:lane id="Lane_1atyuwz" name="Procuradoria Federal (PF/FUA)" />
+    </bpmn:laneSet>
+  </bpmn:process>
+  <bpmn:process id="Process_14xzcje" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1cjawz2">
+      <bpmndi:BPMNShape id="Participant_1jukn4e_di" bpmnElement="Participant_1jukn4e" isHorizontal="true" isExpanded="true">
+        <dc:Bounds x="160" y="80" width="1190" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0mh2gaq" bpmnElement="Participant_10f1rfs" isHorizontal="true" isExpanded="true">
+        <dc:Bounds x="160" y="350" width="1190" height="490" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1ngwds8_di" bpmnElement="Lane_1ngwds8" isHorizontal="true">
+        <dc:Bounds x="190" y="350" width="1160" height="245" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_01rn7ii_di" bpmnElement="Lane_01rn7ii" isHorizontal="true">
+        <dc:Bounds x="190" y="595" width="1160" height="245" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1skbupk" bpmnElement="Participant_1f4z03i" isHorizontal="true" isExpanded="true">
+        <dc:Bounds x="160" y="870" width="1190" height="490" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1hh0kv3_di" bpmnElement="Lane_1hh0kv3" isHorizontal="true">
+        <dc:Bounds x="190" y="870" width="1160" height="125" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1xipdxh_di" bpmnElement="Lane_1xipdxh" isHorizontal="true">
+        <dc:Bounds x="190" y="995" width="1160" height="125" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_062ihke_di" bpmnElement="Lane_062ihke" isHorizontal="true">
+        <dc:Bounds x="190" y="1120" width="1160" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1atyuwz_di" bpmnElement="Lane_1atyuwz" isHorizontal="true">
+        <dc:Bounds x="190" y="1240" width="1160" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0mjk0s2" bpmnElement="Participant_0yym9zr" isHorizontal="true" isExpanded="true">
+        <dc:Bounds x="160" y="1390" width="1190" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

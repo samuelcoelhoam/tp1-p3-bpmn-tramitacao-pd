@@ -32,6 +32,20 @@ diagrama/
   em anexo, o fluxograma oficial do processo. Esta é a referência normativa
   principal do diagrama.
 
+## Esboço colaborativo (pré-modelagem)
+
+Antes da modelagem formal no Camunda Modeler, a equipe discutiu o fluxo em conjunto
+numa chamada de vídeo com tela compartilhada, usando o FigJam (ferramenta já
+conhecida por todos, o que deu mais agilidade à discussão). Cada integrante foi
+adicionando ou ajustando elementos a partir do que lembrava da entrevista com a
+Secretaria do IComp e da leitura da Resolução CONSAD-UFAM nº 047/2024.
+
+![Esboço colaborativo no FigJam](historico/esboco-colaborativo-figjam.png)
+
+Esse esboço não é uma versão do arquivo `.bpmn` (foi feito em outra ferramenta,
+sem a notação formal do BPMN 2.0) — por isso fica registrado aqui em separado,
+como evidência do processo de levantamento conjunto que antecedeu a v0.1.
+
 ## Histórico de versões
 
 Cada linha corresponde a um commit relevante deste repositório. Para atualizar
